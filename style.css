@@ -1,0 +1,299 @@
+body {
+    background-color: black;
+    color:powderblue;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.5em;
+    text-align: center;
+    text-shadow: 0 0 1em goldenrod;
+    background-image: url("https://acegif.com/wp-content/uploads/gifs/rainbow-17.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 1em goldenrod;
+    -webkit-backdrop-filter: blur(250px);
+    backdrop-filter: blur(250px);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 10px goldenrod;
+}
+
+nav {
+    background-color: transparent;
+    color:powderblue;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 1em goldenrod;
+    position: relative;
+    -webkit-backdrop-filter: invert(5%);
+    backdrop-filter: invert(5%);
+    }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav li {
+    float: inline-start;
+    margin: 0.25em;
+}
+
+nav li a {
+    display: block;
+    color: powderblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+    transition: all 50ms ease-in-out;
+}
+
+nav li a:active {
+    background-color: purple;
+}
+
+nav li a:visited {
+    color: brown;
+    box-shadow: inset 0 0 100px goldenrod;
+}
+
+nav li a:link {
+    font-style: italic;
+}
+
+#showHeader {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.5em;
+    margin: 1rem;
+}
+
+.fancy-border {
+    border: 2px solid transparent;
+    border-radius: 1em;
+    border-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+    border-image-slice: 1;
+}
+
+
+.input {
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.input:hover {
+    background-color: darkorange;
+    color: black;
+} 
+    
+
+article {
+    font-size: large;
+    text-shadow: none;
+    color: whitesmoke;
+    font-family: monospace;
+    text-shadow: black 0.01em 0.01em .25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+code {
+    background-color: navy;
+    color: whitesmoke;
+    text-shadow: none;
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.5em;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-indent: 1.5rem;
+} 
+
+.container {
+    display: flex;
+    gap: 1px;
+    background-color: lightcyan;
+    border: 0.25em solid goldenrod;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px goldenrod;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+[class ^="item-"] {
+    margin: 1em;
+    padding: 1em;
+    border: 0.25em solid black;
+}
+
+[class ^="item-"]:hover {
+    box-shadow: inset 0 0 2rem 2rem greenyellow;
+}
+
+[class ^="item-"]::before {
+    content: 'item';
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.btn {
+    background-color: black;
+    color:powderblue;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5em;
+    border: 0.1em solid goldenrod;
+    border-radius: 0.5em;
+}
+
+.btn:hover {
+    background-color: powderblue;
+    color: black;
+}
+
+.btn:active {
+    transform: translate3d(-0.1em, 0.1em, 0);
+    transition: all 5ms ease;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5em 0.5em goldenrod;
+    background-color:rgba(200, 170, 30, 0.25);
+}
+
+.btn::before {
+    content: attr(data-text);
+}
+
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.orange {
+    background-color: orange;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.indigo {
+    background-color: indigo;
+    color: white;
+}
+
+.violet {
+    background-color: violet;
+    color: white;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.brown {
+    background-color: brown;
+    color: white;
+}
+
+.pink {
+    background-color: pink;
+    color: black;
+}
+
+.grey {
+    background-color: grey;
+    color: white;
+}
+
+.purple {
+    background-color: purple;
+    color: white;
+}
+
+.rainbow {    
+    background: radial-gradient(red, orange, yellow, green, blue, indigo, violet);
+	background-size: 1400% 1400%;
+	animation: gradient 145s ease infinite;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+    nav a {
+      float: none;
+      display: block;
+    }
+  }

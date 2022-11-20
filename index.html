@@ -1,0 +1,122 @@
+<!DOCTYPE html  >
+<html lang="en-US">
+<head>
+    <title>My First Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+                <h1>The Flexbox Viewer</h1>
+                <button class="btn" type="button" id="start" onclick="showContents()">Enter</button>
+    </header>
+
+    <main>
+    <div class="container" id="parent">
+        <div id="child-1" class="item-1 red">1</div>
+        <div id="child-2" class="item-1 orange">2</div>
+        <div id="child-3" class="item-3 yellow">3</div>
+    </div>
+
+        <button id="reset" class="btn" type="button" onclick="reset()">Reset</button>
+        <button id="random" class="btn" type="button" onclick="random()">Random</button>
+    
+    <article id="controls" class="rainbow">
+    <h2>Controls</h2>
+    <div>
+    <label for="display">Display</label>
+    <select id="display" title="display" class="fancy-border" onchange="changeDisplay()" disabled>
+        <option value="flex">flex</option>
+    </select>
+    </div>
+
+    <div>
+    <label for="flex-direction">Flex Direction</label>
+    <select id='flex-direction' title="flex-direction" onchange="changeFlexDirection()">
+        <option value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+    </select>
+    </div>
+    <div>
+    <label for="justify-content">Justify Content</label>
+    <select id="justify-content" onchange="changeJustifyContent()">
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+    </select>
+    </div>  
+    <label>Align Items</label>
+    <select>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="baseline">baseline</option>
+        <option value="stretch">stretch</option>
+    </select>
+
+    <label>Flex Self</label>
+    <select>
+        <option value="auto">auto</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="baseline">baseline</option>
+        <option value="stretch">stretch</option>
+    </select>
+
+    <label>Order</label>
+    <input type="number" value="0">
+
+    <label>Flex Grow</label>
+    <input type="number" value="0">
+
+    <label>Flex Shrink</label>
+    <input type="number" value="0">
+
+    <label>Flex Basis</label>
+    <input type="number" value="0">
+
+    
+    <label>Flex Wrap</label>
+    <select id="flex-wrap" title="flex-wrap" class="fancy-border" onchange="changeFlexWrap()">
+        <option value="nowrap">nowrap</option>
+        <option value="wrap">wrap</option>
+        <option value="wrap-reverse">wrap-reverse</option>
+    </select>
+
+    <label>Align Content</label>
+    <select>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="stretch">stretch</option>
+    </select>
+
+    </article>
+</main>
+<footer>
+    <small>Flexbox Viewer </small>
+</footer>
+<span id="showHeader"><button class="btn" onclick="document.getElementById('header').hidden = false;">Main Menu</button></span>
+</body>
+</html>
