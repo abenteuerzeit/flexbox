@@ -94,8 +94,10 @@ nav li a:link {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding: 0.5em;
-    margin: 1rem;
+}
+
+#showHeader .btn {
+    font-size: xx-small;
 }
 
 .fancy-border {
@@ -131,6 +133,13 @@ article {
     align-content: center;
 }
 
+article div {
+    margin: 0.5em;
+    padding: 0.75em;
+    border: 1px solid black;
+    border-radius: 1em;
+
+}
 
 
 code {
@@ -274,6 +283,17 @@ code {
     background: radial-gradient(red, orange, yellow, green, blue, indigo, violet);
 	background-size: 1400% 1400%;
 	animation: gradient 145s ease infinite;
+}
+
+#controls {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+
 }
 
 
