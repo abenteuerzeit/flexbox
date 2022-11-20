@@ -11,6 +11,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     height: 200vh;
+    width: 200vh;
 }
 
 header {
@@ -151,6 +152,9 @@ code {
 } 
 
 .container {
+    position: absolute;
+    top: 30%;
+    left: 30%;
     display: flex;
     gap: 1px;
     background-color: lightcyan;
@@ -281,25 +285,75 @@ code {
 	animation: gradient 145s ease infinite;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.5em);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+    gap: 1em;
+    margin: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+button {
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    border: 0.1em solid goldenrod;
+    border-radius: 0.5em;
+    background-color: transparent;
+    color: black;
+    font-size: 1.25em;
+    flex: 1 1 auto;
+}
+
+button:hover
+{
+    background-color: goldenrod;
+    color: black;
+}
+
+button:active
+{
+    transform: translate3d(-0.1em, 0.1em, 0);
+    transition: all 5ms ease;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5em 0.5em goldenrod;
+    background-color:rgba(200, 170, 30, 0.25);
+}
+
 #controls {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.5em);
+    display: flex;
+    flex-direction: column;
     height: auto;
     width: auto;
     overflow: scroll;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    gap: 0.5em;
+    gap: 0.1em;
     background-color: transparent;
-    border: 0.25em solid goldenrod;
-    border-radius: 0.5em;
-    box-shadow: 0 0 10px goldenrod;
+    border: 0.15em solid goldenrod;
+    border-radius: 0.1em;
+    box-shadow: 0 0 1px goldenrod;
     padding: 1em;
     font-size: smaller;
+    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.5em);
 }
 
 

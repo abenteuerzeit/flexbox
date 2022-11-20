@@ -26,28 +26,31 @@
 
     <main>
     <div class="container" id="parent">
-        <div id="child-1" class="item-1 red">1</div>
-        <div id="child-2" class="item-1 orange">2</div>
-        <div id="child-3" class="item-3 yellow">3</div>
+        <div id="child-1" class="item-1 red btn" onclick="displayComputedStyle(this)">1</div>
     </div>
-
-        <button id="reset" class="btn" type="button" onclick="reset()">Reset</button>
-        <button id="random" class="btn" type="button" onclick="random()">Random Flex Options</button>
-        <button id="add-child" class="btn" type="button" onclick="addChild()">Add Child</button>
-        <button id="remove-child" class="btn" type="button" onclick="removeCh()">Remove Child</button>
-        <button id="add-parent" class="btn" type="button" onclick="addParent()">Add Parent</button>
-        <button id="remove-parent" class="btn" type="button" onclick="removeParent()">Remove Parent</button>
-        <button id="add-sibling" class="btn" type="button" onclick="addSibling()">Add Sibling</button>
-        <button id="remove-sibling" class="btn" type="button" onclick="removeSibling()">Remove Sibling</button>
-        <button id="add-attribute" class="btn" type="button" onclick="addAttribute()">Add Attribute</button>
-        <button id="remove-attribute" class="btn" type="button" onclick="removeAttribute()">Remove Attribute</button>
-        <button id="display-child-style" class="btn" type="button" onclick="displayChildStyle()">Display Child Style</button>
-        <button id="display-parent-style" class="btn" type="button" onclick="displayParentStyle()">Display Parent Style</button>
-    <article id="controls" class="rainbow">
+    <div id="buttons" class="buttons">
+        <span id="showHeader"><button class="btn" onclick="document.getElementById('header').hidden = false;">Main Menu</button></span>
+        <button id="reset" class="" type="button" onclick="reset()">Reset</button>
+        <button id="random" class="" type="button" onclick="random()">Random Flex Options</button>
+        <button id="add-child" class="" type="button" onclick="addChild()">Add Child</button>
+        <button id="remove-child" class="" type="button" onclick="removeCh()">Remove Child</button>
+        <button id="add-parent" class="" type="button" onclick="addParent()">Add Parent</button>
+        <button id="remove-parent" class="" type="button" onclick="removeParent()">Remove Parent</button>
+        <button id="add-sibling" class="" type="button" onclick="addSibling()">Add Sibling</button>
+        <button id="remove-sibling" class="" type="button" onclick="removeSibling()">Remove Sibling</button>
+        <button id="add-attribute" class="" type="button" onclick="addAttribute()">Add Attribute</button>
+        <button id="remove-attribute" class="" type="button" onclick="removeAttribute()">Remove Attribute</button>
+        <button id="display-child-style" class="" type="button" onclick="displayChildStyle()">Display Child Style</button>
+        <button id="display-parent-style" class="" type="button" onclick="displayParentStyle()">Display Parent Style</button>
+        <button id="toggleControls" class="" type="button" onclick="toggleControls()">Con</button>
+    </div>  
+    
+    
+        <article id="controls">
         <div>
             <h2>Controls</h2>
         </div>
-    <div>
+    <div id="control-options">
     <label for="display">Display</label>
     <select id="display" title="display" class="fancy-border" onchange="changeDisplay()">
         <option value="unset">unset</option>
@@ -166,7 +169,6 @@
 </main>
 <footer>
     <small>Flexbox Viewer </small> <br>
-    <span id="showHeader"><button class="btn" onclick="document.getElementById('header').hidden = false;">Main Menu</button></span>
 </footer>
 </body>
 </html>

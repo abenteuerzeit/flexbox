@@ -1,6 +1,7 @@
 var containers = document.getElementsByClassName('container'); 
 var items = document.getElementsByClassName('item');
 let COUNTER = 0;
+const COLORS = ['red', 'green', 'blue', 'yellow', 'purple', 'pink', 'orange', 'brown', 'black', 'white'];
 
 
 function showContents(){
@@ -29,7 +30,7 @@ const flexBoxOptions = {
 }
 
 const flexBox = {
-    display: 'none',
+    display: '',
     flexDirection: '',
     justifyContent: '',
     alignItems: '',
@@ -108,7 +109,8 @@ const random = ()  => {
         style.flexBasis = flexBoxOptions.flexBasis[Math.floor(Math.random() * flexBoxOptions.flexBasis.length)];
         style.flexWrap = flexBoxOptions.flexWrap[Math.floor(Math.random() * flexBoxOptions.flexWrap.length)];
         style.alignContent = flexBoxOptions.alignContent[Math.floor(Math.random() * flexBoxOptions.alignContent.length)];
-        children[i].style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+        children[i].style.backgroundColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+        //children[i].style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
     }
     parent.style.display = flexBoxOptions.display;
     parent.style.flexDirection = flexBoxOptions.flexDirection[Math.floor(Math.random() * flexBoxOptions.flexDirection.length)];
@@ -122,6 +124,8 @@ const random = ()  => {
     parent.style.flexWrap = flexBoxOptions.flexWrap[Math.floor(Math.random() * flexBoxOptions.flexWrap.length)];
     parent.style.alignContent = flexBoxOptions.alignContent[Math.floor(Math.random() * flexBoxOptions.alignContent.length)];
 }
+
+
 
 const displayChildStyle =() => {
     const parent = document.getElementById("parent");
@@ -184,3 +188,40 @@ const displayParentStyle = () => {
     return str;
 }
 
+const displayComputedStyle = (el) => {
+    const style = window.getComputedStyle(el);
+    properties = ['property: value', '====================', el.tagName + '\t{', ];
+    for (const property in style)
+    {
+        if (style[property] !== undefined && style[property] !== null && style[property] !== '')
+        {
+            const propName = style[property];
+            const propValue = style.getPropertyValue(propName);
+            const line = `\t${propName}:\t${propValue};`;
+            properties.push(line);
+        }
+
+    }
+    const str = properties.join('\n');
+    console.log(str);
+    alert(str);
+
+
+    // const str = `
+    // ${el.tagName.toLowerCase()}\t{
+    // \tdisplay:\t${style.display};
+    // \tflex-direction:\t${style.flexDirection};
+    // \tjustify-content:\t${style.justifyContent};
+    // \talign-items:\t${style.alignItems};
+    // \tflex-self:\t${style.flexSelf};
+    // \torder:\t${style.Order};
+    // \tflex-grow:\t${style.flexGrow};
+    // \tflex-shrink:\t${style.flexShrink};
+    // \tflex-basis:\t${style.flexBasis};
+    // \tflex-wrap:\t${style.flexWrap};
+    // \talign-content:\t${style.alignContent};
+    // }`;
+    // console.log(str);
+    // alert(str);
+    // return str;
+};
